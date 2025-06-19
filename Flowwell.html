@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlowWell Modes 3D</title>
+  <link rel="stylesheet" href="flowwell-modes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="mode-card">
+    <h2>🌟 FlowWell Modes</h2>
+
+    <div class="mode tilt focus-mode">
+      <div class="selector unchecked"></div>
+      <div class="icon focus-icon"></div>
+      <span class="label">Focus Mode</span>
+      <i class="fas fa-sliders"></i>
+    </div>
+
+    <div class="mode tilt calm-mode">
+      <div class="selector unchecked"></div>
+      <div class="icon calm-icon"></div>
+      <span class="label">Calm Mode</span>
+      <i class="fas fa-sliders"></i>
+    </div>
+
+    <div class="mode tilt selected energy-mode">
+      <div class="selector checked"><i class="fas fa-check"></i></div>
+      <div class="icon energy-icon"></div>
+      <span class="label">Energy Boost</span>
+      <i class="fas fa-sliders"></i>
+    </div>
+  </div>
+
+  <script>
+    // Optional JavaScript-based 3D effect (tilt on mouse move)
+    document.querySelectorAll('.tilt').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotateX = -(y - rect.height / 2) / 10;
+        const rotateY = (x - rect.width / 2) / 10;
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    });
+  </script>
+</body>
+</html>

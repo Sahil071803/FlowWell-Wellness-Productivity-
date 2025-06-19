@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Tracker - Productivity & Wellness</title>
+  <link rel="stylesheet" href="mood-tracker.css" />
+</head>
+<body>
+  <div class="tracker-container">
+    <header class="tracker-header">
+      <div class="filters">
+        <div class="filter-group">
+          <label>Timeframe:</label>
+          <button class="active">Weekly</button>
+          <button>Monthly</button>
+          <button>Yearly</button>
+        </div>
+        <div class="filter-group">
+          <label>Status:</label>
+          <button class="active">Tracked</button>
+          <button>Estimated</button>
+        </div>
+      </div>
+      <div class="title-section">
+        <h1><span>Mood</span> Tracking</h1>
+        <p>Intensity measured by happiness / stress levels</p>
+        <a href="#" class="download">Download the data ⬇</a>
+      </div>
+    </header>
+
+    <section class="key">
+      <p><span class="dash-line"></span> Target: High Mood (8-10)</p>
+      <p><span class="solid-line"></span> Target: Moderate Mood (5-7)</p>
+    </section>
+
+    <section class="chart">
+      <div class="bar-row">
+        <div class="bar bar-80"><span>8</span></div>
+        <div class="bar bar-60"><span>6</span></div>
+        <div class="bar bar-90"><span>9</span></div>
+        <div class="bar bar-40"><span>4</span></div>
+        <div class="bar bar-70"><span>7</span></div>
+        <div class="bar bar-50"><span>5</span></div>
+        <div class="bar bar-30"><span>3</span></div>
+      </div>
+      <div class="x-labels">
+        <span>Mon</span>
+        <span>Tue</span>
+        <span>Wed</span>
+        <span>Thu</span>
+        <span>Fri</span>
+        <span>Sat</span>
+        <span>Sun</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

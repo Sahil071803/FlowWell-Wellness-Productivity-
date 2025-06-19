@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Session - Productivity & Wellness</title>
+  <link rel="stylesheet" href="focus-session.css" />
+</head>
+<body>
+  <div class="focus-container">
+    <header class="focus-header">
+      <div class="filters">
+        <div class="filter-group">
+          <label>Session Type:</label>
+          <button class="active">Pomodoro</button>
+          <button>Deep Work</button>
+          <button>Break</button>
+        </div>
+        <div class="filter-group">
+          <label>Goal:</label>
+          <button class="active">Focus</button>
+          <button>Relaxation</button>
+        </div>
+      </div>
+      <div class="title-section">
+        <h1><span>Focus</span> Session Tracker</h1>
+        <p>Track your flow and boost your productivity</p>
+        <a href="#" class="download">Download session log ⬇</a>
+      </div>
+    </header>
+
+    <section class="session-summary">
+      <div class="session-info">
+        <img src="img-2.png" alt="Focus Illustration" class="session-img" />
+        <div class="stats">
+          <h2>Today's Focus Score</h2>
+          <div class="score" id="scoreCounter">0%</div>
+          <p>Great job! Keep building your streak.</p>
+        </div>
+      </div>
+      <video class="session-video" autoplay muted loop controls>
+  <source src="https://youtu.be/THyrrvBiMaI.mp4" type="video/mp4" autoplay>
+  Your browser does not support the video tag.
+</video>
+    </section>
+  </div>
+
+  <script>
+    let counter = 0;
+    const score = document.getElementById("scoreCounter");
+    const interval = setInterval(() => {
+      if (counter >= 86) {
+        clearInterval(interval);
+      } else {
+        counter++;
+        score.textContent = counter + "%";
+      }
+    }, 25);
+  </script>
+</body>
+</html>

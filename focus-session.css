@@ -1,0 +1,130 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: url('https://media.istockphoto.com/id/1313442604/vector/mindfulness-watercolor-creative-abstract-background.jpg?s=612x612&w=0&k=20&c=wCOB7PyTMVXYfabK3TJXtP6cSK36S7Zu5CoZlBO2hJ0=') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(254, 251, 250, 0.8); /* White translucent overlay */
+  z-index: -1;
+}
+
+.focus-container {
+  padding: 2rem;
+}
+
+.focus-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filter-group label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.filter-group button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #974b4b;
+  border-radius: 20px;
+  background: white;
+  color: #974b4b;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filter-group button.active {
+  background: #974b4b;
+  color: white;
+}
+
+.title-section {
+  text-align: right;
+  max-width: 400px;
+}
+
+.title-section h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.title-section h1 span {
+  color: #974b4b;
+}
+
+.download {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #974b4b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.session-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f4f3;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.session-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.session-img {
+  width: 120px;
+  height: auto;
+}
+
+.stats h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.score {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #974b4b;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.session-video {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
